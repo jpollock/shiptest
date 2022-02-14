@@ -1,7 +1,7 @@
 version: '2.2'
 services:
   akka-serverless-proxy-dc-1:
-    image: gcr.io/cloudstateengine/akkaserverless-proxy-postgres:latest
+    image: docker.io/jpollock/akkaserverless-proxy-postgres:latest
     command: -Dconfig.resource=postgres-dev-mode-A.conf -Dakka.persistence.r2dbc.connection-factory.host=castor.db.elephantsql.com
     ports:
       - "10000:10000"
